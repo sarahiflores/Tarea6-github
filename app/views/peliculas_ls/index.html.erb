@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Peliculas Ls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombredepel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peliculas_ls.each do |peliculas_l| %>
+      <tr>
+        <td><%= peliculas_l.Nombredepel %></td>
+        <td><%= link_to 'Show', peliculas_l %></td>
+        <td><%= link_to 'Edit', edit_peliculas_l_path(peliculas_l) %></td>
+        <td><%= link_to 'Destroy', peliculas_l, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peliculas l', new_peliculas_l_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Peliculasses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombredepeliculas</th>
+      <th>Rate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peliculasses.each do |peliculass| %>
+      <tr>
+        <td><%= peliculass.NombredePeliculas %></td>
+        <td><%= peliculass.rate %></td>
+        <td><%= link_to 'Show', peliculass %></td>
+        <td><%= link_to 'Edit', edit_peliculass_path(peliculass) %></td>
+        <td><%= link_to 'Destroy', peliculass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peliculass', new_peliculass_path %>
